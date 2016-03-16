@@ -1,0 +1,56 @@
+@-webkit-keyframes scalein {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes scalein {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes sliderin {
+  from {
+    transform: translateX(10em);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0em);
+    opacity: 1;
+  }
+}
+@keyframes sliderin {
+  from {
+    transform: translateX(10em);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0em);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slidelin {
+  from {
+    transform: translateX(-10em);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0em);
+    opacity: 1;
+  }
+}
+@keyframes slidelin {
+  from {
+    transform: translateX(-10em);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0em);
+    opacity: 1;
+  }
+}
