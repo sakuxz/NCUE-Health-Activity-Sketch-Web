@@ -23,7 +23,7 @@ var Album = React.createClass({displayName: "Album",
                     React.createElement("img", {src: e+'.jpg'})
                   )
                 );
-              })
+              }.bind(this))
             
 
           )
@@ -37,29 +37,29 @@ var Album = React.createClass({displayName: "Album",
           React.createElement("div", {className: "photos"}, 
             
               this.state.data.photos.map(function (e,i) {
-                return React.createElement("img", {key: i, "data-id": i, src: e+'.jpg'});
-              })
+                return React.createElement("img", {key: i, "data-id": i, src: e+'.jpg', "data-idx": i, onClick: this.setImgPos});
+              }.bind(this))
             
           )
         )
       )
     );
   },
+  setImgPos:function (e) {
+    $("#owl-demo").trigger('to.owl.carousel',[$(e.currentTarget).data("idx"),350]);
+    $(".photos img").removeClass("act");
+    $(e.currentTarget).addClass("act");
+  },
   componentDidMount: function(){
     $("#owl-demo").owlCarousel({
+      items: 1,
+      onChanged: function(e) {
+        console.log(e);
+      }
+    });
 
-      navigation: false, // Show next and prev buttons
-      slideSpeed: 300,
-      paginationSpeed: 400,
-      singleItem: true
-
-      // "singleItem:true" is a shortcut for:
-      // items : 1,
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
-
+    $("#owl-demo").on('changed.owl.carousel',function (e) {
+      //console.log(event);
     });
   }
 });

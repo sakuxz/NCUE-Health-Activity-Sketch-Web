@@ -207,7 +207,7 @@ body {
   box-shadow: 0 3px 2px -3px;
 }
 .img-sider p {
-  margin: 1.6em 2.8em 2.2em;
+  margin: 0em 2.8em 2.2em;
   padding-bottom: 2.4em;
   box-shadow: 0 3px 2px -3px;
 }
@@ -221,4 +221,9 @@ body {
   margin: 2.5%;
   float: left;
   margin-bottom: 1.6em;
+  transition: 0.3s all;
+}
+.img-sider img.act {
+  transform: translateY(-2px);
+  box-shadow: -1px 9px 12px -1px rgba(0, 0, 0, 0.25);
 }
