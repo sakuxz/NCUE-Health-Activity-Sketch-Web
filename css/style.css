@@ -100,23 +100,59 @@ body {
 .activity.left .item-detail.vis h5 {
   animation: sliderin 0.8s;
 }
-.activity .item-detail h5:after {
+
+/*.activity .item-detail h5:after {
   content: "";
   display: block;
   width: 80%;
   height: 1px;
   background: #D2A010;
   margin: 9px 0;
-}
+}*/
+
 .activity.left .item-detail.vis p {
   animation: sliderin 0.8s;
 }
 .activity .item-detail ul {
   padding-left: 1.6em;
   margin-top: 1.5em;
+  list-style: none;
+  border-left: 1px solid #565773;
+  margin-left: 1em;
+  position: relative;
 }
 .activity .item-detail li {
   margin-top: 1.5em;
+}
+.activity .item-detail li span span {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  //position: absolute;
+  background: #597373;
+  //left: -8px;
+  border-radius: 50%;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.15);
+}
+.activity .item-detail.vis li a {
+  animation: scalein 0.6s;
+  animation-timing-function: cubic-bezier(0.78, 0.12, 0.78, 1.49);
+}
+.activity .item-detail.vis li span span {
+  animation: scalein 0.6s;
+  animation-timing-function: cubic-bezier(0.78, 0.12, 0.78, 1.49);
+}
+.activity .item-detail li > span {
+  transform: translateY(2px);
+  position: absolute;
+  left: -8px;
+}
+.activity .item-detail li:last-child > span {
+  transform: translateY(4px);
+}
+.activity .item-detail li:first-child > span {
+  transform: translateY(0px);
 }
 .card {
   overflow: hidden;

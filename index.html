@@ -11,6 +11,8 @@
   <title>104學年度大專院校推動健康促進學校實施計畫</title>
   <link rel="stylesheet" href="css/semantic.min.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/flattyshadow.css" />
 
   <style type="text/css">
     .hidden.menu {
@@ -114,6 +116,7 @@
     
     .ui.inverted.button {
       box-shadow: 0 0 0 2px #B5B5B5 inset!important;
+      box-shadow: 0 0 0 1px #9A9A9A inset!important;
       color: #9E9E9E;
     }
     
@@ -129,6 +132,7 @@
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/semantic.min.js"></script>
   <script src='js/myScript.js'></script>
+
 </head>
 
 <body>
@@ -145,7 +149,7 @@
             <i class="sidebar icon"></i>
           </a>
           <div class="right item">
-            <a class="ui inverted button" href="http://www.ncue.edu.tw/front/bin/home.phtml">彰師大</a>
+            <a class="ui inverted button" href="http://www.ncue.edu.tw/">彰師大</a>
             <a class="ui inverted button" href="http://health.ncue.edu.tw/bin/home.php">學務處醫護室</a>
           </div>
         </div>
@@ -161,6 +165,14 @@
 
     </div>
 
+    <div class="feature-container">
+      <div class="flatty_shadow" data-bg-color="#f65034" data-shadow-color="#df3619" data-icon-color="#ffffff" data-angle="42" data-depth="60" data-shape="50" data-bg-transparency="1" data-shadow-transparency="1" data-icon-transparency="1" data-pos-x="0" data-pos-y="0"
+      data-bg-size="130" data-icon-size="60">
+        <i class="fa fa-road"></i>
+      </div>
+      http://flattyshadow.com/
+    </div>
+
     <div style="background: rgba(210, 210, 210, 0.75);">
       <div class="item-container">
 
@@ -172,10 +184,25 @@
             <h5>活動標題</h5>
             <p>
               <ul>
-                <li>131321 <i class="arrow right icon"></i></li>
-                <li>vcxvxc <i class="arrow right icon"></i></li>
-                <li>fsdfsd <i class="arrow right icon"></i></li>
-                <li>f145sdf5s6 <i class="arrow right icon"></i></li>
+                <li>
+                  <span>
+                    <span></span>
+                  </span><a href="#">菸害防治系列活動(禁用菸符石)</a></li>
+                <li>
+                  <span>
+                    <span></span>
+                  </span><a href="#">菸害防治系列活動(禁用菸符石)</a></li>
+                </li>
+                <li>
+                  <span>
+                    <span></span>
+                  </span><a href="#">菸害防治系列活動(禁用菸符石)</a></li>
+                </li>
+                <li>
+                  <span>
+                    <span></span>
+                  </span><a href="#">菸害防治系列活動(禁用菸符石)</a></li>
+                </li>
               </ul>
             </p>
             <!-- <a>活動剪影</a> -->
@@ -187,10 +214,22 @@
             <h5>活動標題</h5>
             <p>
               <ul>
-                <li>131321</li>
-                <li>vcxvxc</li>
-                <li>fsdfsd</li>
-                <li>f145sdf5s6</li>
+                <li>
+                  <span>
+                    <span></span>
+                  </span><a href="#">菸害防治系列活動(禁用菸符石)</a></li>
+                <li>
+                  <span>
+                    <span></span>
+                  </span><a href="#">菸害防治系列活動(禁用菸符石)</a></li>
+                <li>
+                  <span>
+                    <span></span>
+                  </span><a href="#">菸害防治系列活動(禁用菸符石)</a></li>
+                <li>
+                  <span>
+                    <span></span>
+                  </span><a href="#">菸害防治系列活動(禁用菸符石)</a></li>
               </ul>
             </p>
           </div>
@@ -222,6 +261,29 @@
           </div>
         </div>
       </div>
+
+      <script type="text/javascript">
+        var colorPattern = ['#ff6666', '#52b2ff', '#6bff63', '#fcff5b', '#6affae', '#ff9d79', '#ff91e7'];
+        $(function() {
+          var lc = -1,
+            llc = -1;
+          $(".activity .item-detail li span span").each(function(i, e) {
+            while (true) {
+              var color = Math.floor(Math.random() * colorPattern.length);
+              if (color === lc || color === llc) {} else {
+                llc = lc;
+                lc = color;
+                break;
+              }
+            }
+            $(this).css('background', colorPattern[color]);
+          });
+        })
+      </script>
+      <script src='js/flattyshadow.js'></script>
+      <script type="text/javascript">
+        flattyShadow();
+      </script>
 </body>
 
 </html>

@@ -52,15 +52,16 @@ var Album = React.createClass({
     $(e.currentTarget).addClass("act");
   },
   componentDidMount: function(){
+    $('.photos img:first-child').addClass("act");
     $("#owl-demo").owlCarousel({
-      items: 1,
-      onChanged: function(e) {
-        console.log(e);
-      }
+      items: 1
     });
 
     $("#owl-demo").on('changed.owl.carousel',function (e) {
-      //console.log(event);
+      var index = e.item.index;
+      console.log(index);
+      $(".photos img").removeClass("act");
+      $(".photos img:nth-child("+(index+1)+")").addClass("act");
     });
   }
 });

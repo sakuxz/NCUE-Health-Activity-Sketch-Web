@@ -54,3 +54,23 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes scalein {
+  from {
+    transform: translateX(-10em);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0em);
+    opacity: 1;
+  }
+}
+@keyframes scalein {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
