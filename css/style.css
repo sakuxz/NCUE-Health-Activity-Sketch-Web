@@ -200,6 +200,40 @@ body {
   padding: 5em;
   overflow: auto;
 }
+.feature-container {
+  padding: 5em 0;
+  overflow: hidden;
+  background: url('../bg1.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+.feature-container .ctn {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  font-family: "微軟正黑體";
+}
+.feature-container .ctn > .Icon {
+  float: left;
+  width: 45%;
+  text-align: right;
+}
+.feature-container .ctn > .Icon .flatty_shadow {
+  margin-right: 3em;
+}
+.feature-container .ctn > div {
+  float: left;
+  width: 55%;
+}
+.feature-container .ctn h1 {
+  font-family: "微軟正黑體";
+  font-size: 4em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+.feature-container .ctn p {
+  font-family: "微軟正黑體";
+}
 //album
 * {}
 .img-display {
