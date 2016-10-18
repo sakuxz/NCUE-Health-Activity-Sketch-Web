@@ -34,7 +34,10 @@ var Album = React.createClass({
 
           </div>
         </div>
-        <div className="img-sider">
+        <button className="ui icon button toggle-sider close" onClick={this.toggleSider}>
+          <i className="ellipsis vertical icon"></i>
+        </button>
+        <div className="img-sider close">
           <div>
             <h6>{this.state.data.title}</h6>
             <h6 className="sec"><i className="camera retro icon"></i>{this.state.data.photos.length}</h6>
@@ -51,7 +54,10 @@ var Album = React.createClass({
       </div>
     );
   },
-  setImgPos:function (e) {
+  toggleSider: function () {
+    $('.toggle-sider, .img-sider').toggleClass('close');
+  },
+  setImgPos: function (e) {
     $("#owl-demo").trigger('to.owl.carousel',[$(e.currentTarget).data("idx"),350]);
     $(".photos img").removeClass("act");
     $(e.currentTarget).addClass("act");
