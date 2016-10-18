@@ -10,8 +10,8 @@ var Album = React.createClass({
     }
     return {
       data: {
-        title: "菸害防治講座",
-        description:"vcxvxvxcvxcvxcvxcvccv",
+        title: location.hash.split('-')[2],
+        description:"大專院校推動健康促進學校實施計畫",
         photos,
       }
     };
