@@ -235,6 +235,17 @@ body {
 }
 //album
 * {}
+.img-sider::-webkit-scrollbar {
+  width: 5px;
+}
+.img-sider::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.img-sider::-webkit-scrollbar-thumb {
+  background-color: rgb(191, 191, 191);
+  outline: 1px solid rgb(191, 191, 191);
+  border-radius: 5px;
+}
 .img-display {
   width: 70%;
 }
@@ -246,6 +257,7 @@ body {
   right: 0;
   background: white;
   color: gray;
+  overflow-y: auto;
 }
 .img-sider h6 {
   font-size: 1.2em;

@@ -3,11 +3,16 @@ const ReactDOM = require('react-dom');
 
 var Album = React.createClass({
   getInitialState: function() {
+    const url = './images/activity/'+location.hash.split('-')[0].replace('#','');
+    let photos = [];
+    for (var i = 0; i < location.hash.split('-')[1]; i++) {
+      photos.push(url+'/'+i);
+    }
     return {
       data: {
         title: "菸害防治講座",
         description:"vcxvxvxcvxcvxcvxcvccv",
-        photos:["a","b","c","e"]
+        photos,
       }
     };
   },
