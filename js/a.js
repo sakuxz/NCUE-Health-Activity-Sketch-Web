@@ -59,7 +59,7 @@
 	    return {
 	      data: {
 	        title: location.hash.split('-')[2],
-	        description: "vcxvxvxcvxcvxcvxcvccv",
+	        description: "大專院校推動健康促進學校實施計畫",
 	        photos: photos
 	      }
 	    };
@@ -84,8 +84,13 @@
 	        )
 	      ),
 	      React.createElement(
+	        'button',
+	        { className: 'ui icon button toggle-sider close', onClick: this.toggleSider },
+	        React.createElement('i', { className: 'ellipsis vertical icon' })
+	      ),
+	      React.createElement(
 	        'div',
-	        { className: 'img-sider' },
+	        { className: 'img-sider close' },
 	        React.createElement(
 	          'div',
 	          null,
@@ -115,6 +120,9 @@
 	        )
 	      )
 	    );
+	  },
+	  toggleSider: function toggleSider() {
+	    $('.toggle-sider, .img-sider').toggleClass('close');
 	  },
 	  setImgPos: function setImgPos(e) {
 	    $("#owl-demo").trigger('to.owl.carousel', [$(e.currentTarget).data("idx"), 350]);
