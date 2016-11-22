@@ -26,7 +26,7 @@ var Album = React.createClass({
               this.state.data.photos.map(function (e,i) {
                 return (
                   <div key={i} className="item">
-                    <img src={e+'.jpg'} />
+                    <img className="owl-lazy" data-src={e+'.jpg'} />
                   </div>
                 );
               }.bind(this))
@@ -65,7 +65,8 @@ var Album = React.createClass({
   componentDidMount: function(){
     $('.photos img:first-child').addClass("act");
     $("#owl-demo").owlCarousel({
-      items: 1
+      items: 1,
+      lazyLoad: true,
     });
 
     $("#owl-demo").on('changed.owl.carousel',function (e) {
