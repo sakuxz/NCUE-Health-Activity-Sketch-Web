@@ -46,7 +46,7 @@ var Album = React.createClass({
           <div className="photos">
             {
               this.state.data.photos.map(function (e,i) {
-                return <img key={i} data-id={i} src={e+'.jpg'} data-idx={i} onClick={this.setImgPos} />;
+                return <img key={i} data-id={i} src={e+'_sm.jpg'} data-idx={i} onClick={this.setImgPos} />;
               }.bind(this))
             }
           </div>
